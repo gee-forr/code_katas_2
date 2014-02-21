@@ -7,6 +7,10 @@ sort_list = (numbers) ->
   sorted
 
 list_searcher = (needle, haystack) ->
+  '''
+  Returns the index in the sorted array of needle if found,
+  else returns false
+  '''
   sorted_haystack = sort_list(haystack)
   found           = sorted_haystack.indexOf(needle)
 
