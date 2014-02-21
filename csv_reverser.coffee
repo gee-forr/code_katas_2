@@ -1,5 +1,8 @@
 #!/usr/bin/env coffee
 
+# Note - this script will require node.js to run, as reading files on the server side via js
+# is not something vanilla js does too well
+
 fs = require 'fs'
 
 fs.readFile('test.pipe', 'ascii', (err, data) ->

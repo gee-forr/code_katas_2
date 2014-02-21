@@ -1,0 +1,17 @@
+{
+  stock: [
+    {
+      name: 'Musica',
+      branch: 'Eastgate',
+      note: 'The Musica Store',
+      cds: [ 'Creed', 'Marilyn Manson', 'Nine Inch Nails', 'Boksburg Sokkie Treffers', 'Bon Jovi' ]
+    },
+    {
+      name: 'Exclusive Books',
+      branch: 'Soweto',
+      note: 'The Exclusive Books Store',
+      cds: [ 'Creed' ],
+      books: ['The Alchemist', 'Java For Dummies', 'Kamasutra version 4']
+    }
+  ]
+}
