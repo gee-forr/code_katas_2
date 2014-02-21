@@ -1,6 +1,6 @@
 #!/usr/bin/env coffee
 
-fs   = require 'fs'
+fs = require 'fs'
 
 store_data = 'a'
 
