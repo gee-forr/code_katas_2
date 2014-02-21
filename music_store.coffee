@@ -40,10 +40,14 @@ fs.readFile('store.json', 'ascii', (err, data) ->
       who_has_stock += "The following stores have stock of #{cd}:\n"
 
       for store in stores_in_stock
-        who_has_stock += "  #{store.name} at #{store.branch}"
+        who_has_stock += "  #{store.name} at #{store.branch}\n"
     else
       who_has_stock += "No stores have stock of #{cd}. Have you considered iTunes?"
 
-  console.log(get_products_for('Exclusive Books', 'Soweto', store))
-  console.log(get_stores_stocking_cd('Creed', store))
+    who_has_stock
+
+  console.log(get_products_for('Exclusive Books', 'Soweto', JSON.parse data))
+  console.log(get_stores_stocking_cd('Creed', JSON.parse data))
+  console.log(get_stores_stocking_cd('Nine Inch Nails', JSON.parse data))
+  console.log(get_stores_stocking_cd('Britney Spears', JSON.parse data))
 )
