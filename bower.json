@@ -1,0 +1,18 @@
+{
+  "name": "code_katas_2",
+  "version": "0.0.0",
+  "homepage": "https://github.com/gee-forr/code_katas_2",
+  "authors": [
+    "Gabriel Fortuna <gee.forr@gmail.com>"
+  ],
+  "description": "More code katas",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
