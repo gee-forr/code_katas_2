@@ -1,12 +1,10 @@
 #!/usr/bin/env coffee
 
-# Note to the interviewer:
-# I tried to model the answer here as closely as possible to the answer3.java template
+# I tried to model the solution here as closely as possible to the answer3.java template
 # This naturally becomes a little awkward, as the language philosphies are somewhat different.
 # As javascript tends to gain most of it's power from the fact that it's productive when used as
 # closely as possible as a functional language, I would not (in the real world) call sort_list()
 # from within list_searcher(), but rather send a list sorter as a function parameter, as you can see below.
-# I hope this highights my ability to adapt to a languages strengths...
 
 sort_list = (numbers) ->
   sorted = numbers.sort (a, b) ->
