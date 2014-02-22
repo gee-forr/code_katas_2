@@ -14,7 +14,7 @@
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
   "dependencies": {
     "jasmine": "2.0",
     "grunt":   "0.4.2"
