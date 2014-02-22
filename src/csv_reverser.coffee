@@ -5,6 +5,18 @@
 
 fs = require 'fs'
 
+reverse_multi_line_string = (string) ->
+  lines    = data.split(/\n/)
+  new_data = []
+
+  for line in lines
+    rev_line = "#{line.split('').reverse().join('')} "
+    new_line = rev_line.replace(/\|/g, ',')
+
+    new_data.push new_line
+
+  new_data.join("\n")
+
 fs.readFile('test.pipe', 'ascii', (err, data) ->
   throw err if err
 

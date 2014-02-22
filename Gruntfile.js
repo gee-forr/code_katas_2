@@ -1,18 +1,14 @@
 module.exports = function(grunt) {
-
   grunt.initConfig({
-    jasmine : {
-      src:   'src/**/*.js',
-      options: {
-        specs: 'spec/*_spec.js'
+    jasmine_node: {
+        specNameMatcher: "./spec/*spec.js", // load only specs containing specNameMatcher
+        projectRoot: ".",
+        requirejs: true,
+        forceExit: true
       }
-    }
   });
 
-  // Register tasks.
-  //grunt.loadNpmTasks('grunt-jasmine-runner');
-  grunt.loadNpmTasks('grunt-contrib-jasmine');
+  grunt.loadNpmTasks('grunt-jasmine-node');
 
-  // Default task.
-  grunt.registerTask('default', 'jasmine');
+  grunt.registerTask('default', 'jasmine_node');
 };
