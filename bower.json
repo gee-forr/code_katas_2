@@ -16,9 +16,6 @@
     "tests"
   ],
   "dependencies": {
-    "jasmine":             "2.0",
-    "grunt":               "0.4.2",
-    "grunt-cli":           "0.1.13",
-    "grunt-contrib-node":  "0.1.0"
+    "node-qunit"
   }
 }

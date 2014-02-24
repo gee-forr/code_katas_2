@@ -5,7 +5,7 @@
 
 fs = require 'fs'
 
-reverse_multi_line_string = (string) ->
+exports.reverse_multi_line_string = (string) ->
   lines    = data.split(/\n/)
   new_data = []
 

@@ -5,7 +5,7 @@ describe("CSV reverser", () ->
     str = 'abc 123'
     rev = '321 cba'
 
-    expect(reverse_multi_line_string(str)).toBe(rev)
-    expect(true).toEqual(true);
+    expect(true).toEqual(false);
+    #expect(csv_reverser.reverse_multi_line_string(str)).toBe(rev)
   )
 )
