@@ -1,19 +1,19 @@
 fs       = require 'fs'
-Reverser = require("./csv_reverser").Reverser
+Reverser = require("../lib/csv_reverser").Reverser
 
-last_arg = process.argv.length - 1
-console.log process.argv[last_arg]
+from_arg = process.argv.length - 2
+to_arg   = process.argv.length - 1
 
-fs.readFileSync 'test.pipe', 'ascii', (err, data) ->
+from_file = process.argv[from_arg]
+to_file   = process.argv[to_arg]
+
+fs.readFile from_file, 'ascii', (err, data) ->
   throw err if err
 
-  console.log("foooo")
-
   reverser = new Reverser data
-  new_data = reverser.reverse_multiline
+  new_data = reverser.reverse_multiline()
 
-  fs.writeFile 'reverse.csv', new_data, (err) ->
+  fs.writeFile to_file, new_data, (err) ->
     throw err if err
 
-    console.log("File saved as reverse.csv.")
-
+    console.log("File saved as #{to_file}.")
