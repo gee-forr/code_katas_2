@@ -4,3 +4,4 @@ node_modules
 _SpecRunner.html
 src/reverse.csv
 lib/reverse.csv
+bin/reverse.csv
