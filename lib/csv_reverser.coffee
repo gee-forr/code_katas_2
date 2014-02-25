@@ -28,16 +28,3 @@ class Reverser
     line.replace(/\s+$/g, "")
 
 module.exports.Reverser = Reverser
-
-fs = require 'fs'
-
-fs.readFileSync 'test.pipe', 'ascii', (err, data) ->
-  throw err if err
-
-  reverser = new Reverser data
-  new_data = reverser.reverse_multiline
-
-  fs.writeFile 'reverse.csv', new_data, (err) ->
-    throw err if err
-
-    console.log("File saved as reverse.csv.")
