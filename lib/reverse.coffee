@@ -1,5 +1,5 @@
 fs       = require 'fs'
-Reverser = require("../lib/csv_reverser").Reverser
+Reverser = require("./csv_reverser").Reverser
 
 fs.readFileSync 'test.pipe', 'ascii', (err, data) ->
   throw err if err
