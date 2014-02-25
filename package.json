@@ -1,0 +1,12 @@
+{
+  "name": "code-katas",
+  "preferGlobal": true,
+  "author": "Gabriel Fortuna <gee.forr@gmail.com>",
+  "description": "Code Katas",
+  "dependencies": {
+    "coffee-script": "1.6.3"
+  },
+  "devDependencies": {
+    "qunit": "^0.5.18"
+  }
+}
