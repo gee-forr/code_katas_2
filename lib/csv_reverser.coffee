@@ -3,35 +3,41 @@
 # Note - this script will require node.js to run, as reading files on the server side via js
 # is not something vanilla js does too well
 
-#fs = require 'fs'
+class Reverser
+  constructor: (@string) ->
 
-exports.reverse_multi_line_string = (string) ->
-  lines    = data.split(/\n/)
-  new_data = []
+  reverse_multiline: () ->
+    lines    = @string.split(/\n/)
+    new_data = []
 
-  for line in lines
-    rev_line = "#{line.split('').reverse().join('')} "
-    new_line = rev_line.replace(/\|/g, ',')
+    for line in lines
+      rev_line = @reverse_line(line)
+      new_line = @commarize(rev_line)
 
-    new_data.push new_line
+      new_data.push new_line
 
-  new_data.join("\n")
+    @trim(new_data.join("\n"))
 
-#fs.readFileSync('test.pipe', 'ascii', (err, data) ->
-  #throw err if err
+  reverse_line: (line) ->
+    "#{@trim(line.split('').reverse().join(''))}"
 
-  #lines    = data.split(/\n/)
-  #new_data = []
+  commarize: (line) ->
+    line.replace(/\|/g, ',')
 
-  #for line in lines
-    #rev_line = "#{line.split('').reverse().join('')} "
-    #new_line = rev_line.replace(/\|/g, ',')
+  trim: (line) ->
+    line.replace(/\s+$/g, "")
 
-    #new_data.push new_line
+module.exports.Reverser = Reverser
 
-  #fs.writeFile('reverse.csv', new_data.join("\n"), (err) ->
-    #throw err if err
+fs = require 'fs'
 
-    #console.log("File saved as reverse.csv.")
-  #)
-#)
+fs.readFileSync 'test.pipe', 'ascii', (err, data) ->
+  throw err if err
+
+  reverser = new Reverser data
+  new_data = Reverser.reverse_multiline
+
+  fs.writeFile 'reverse.csv', new_data, (err) ->
+    throw err if err
+
+    console.log("File saved as reverse.csv.")
