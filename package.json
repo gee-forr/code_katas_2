@@ -7,6 +7,7 @@
     "coffee-script": "1.6.3"
   },
   "devDependencies": {
-    "qunit": "^0.5.18"
+    "chai": "^1.9.0",
+    "mocha": "1.17.1"
   }
 }
