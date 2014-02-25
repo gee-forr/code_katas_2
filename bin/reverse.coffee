@@ -1,3 +1,7 @@
+#!/usr/bin/env coffee
+
+# Usage: coffee reverse.coffee -n <from_file.pipe> <to_file.csv>
+
 fs       = require 'fs'
 Reverser = require("../lib/csv_reverser").Reverser
 
