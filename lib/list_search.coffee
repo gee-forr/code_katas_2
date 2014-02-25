@@ -23,10 +23,13 @@ list_searcher = (needle, haystack, sorter) ->
 
   if found is -1 then false else found
 
-list = [1, 3, 10, -100, 2, 1, 53, 0]
+#list = [1, 3, 10, -100, 2, 1, 53, 0]
 
-console.log(sort_list(list))
-console.log(list_searcher(2, list, sort_list)) # Should return 4 as the index
+#console.log(sort_list(list))
+#console.log(list_searcher(2, list, sort_list)) # Should return 4 as the index
 
-console.log(sort_list(list))
-console.log(list_searcher(13, list, sort_list)) # Should return false, as 13 doesn't exist
+#console.log(sort_list(list))
+#console.log(list_searcher(13, list, sort_list)) # Should return false, as 13 doesn't exist
+
+module.exports.sort_list     = sort_list
+module.exports.list_searcher = list_searcher

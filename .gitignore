@@ -3,3 +3,5 @@ node_modules
 .grunt
 _SpecRunner.html
 src/reverse.csv
+lib/reverse.csv
+bin/reverse.csv
